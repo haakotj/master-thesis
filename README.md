@@ -1,6 +1,11 @@
 # master-thesis
 
-The modified ChaCha20-Poly1305 with two keys: one MAC key and one confidentiality key
+The modified ChaCha20-Poly1305 with two keys: one MAC key and one confidentiality key. 
+The implementation is based on:
+* RFC 8439 (https://datatracker.ietf.org/doc/html/rfc8439)
+* D. J. Bernstein documentation (https://cr.yp.to/chacha.html and https://cr.yp.to/mac.html)
+* https://github.com/tex2e/chacha20-poly1305
+* https://github.com/pts/chacha20
 
 The files:
 * **ChaCha20_poly1305_modified.py:** contain a python implementation of the modified chacha20-poly1305
