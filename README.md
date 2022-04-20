@@ -1,8 +1,6 @@
 # master-thesis
 
 The modified ChaCha20-Poly1305 with two keys: one MAC key and one confidentiality key. 
-The implementation is based on RFC8439 and D. J. Bernstein documentations. 
-
 
 The files:
 * **ChaCha20_poly1305_modified.py:** contain a python implementation of the modified chacha20-poly1305
@@ -11,6 +9,7 @@ The files:
 * **Simulation_chacha20-poly1305_modified_scenario3.py:** simulation of the modified chacha20-poly1305 in the cloud-IoT architecture where the end-user receives wrong authentication tag
 
 
+The implementation is based on RFC8439 and D. J. Bernstein documentations. 
 ## References:
 * RFC 8439 (https://datatracker.ietf.org/doc/html/rfc8439)
 * D. J. Bernstein ChaCha20 documentation (https://cr.yp.to/chacha.html  
