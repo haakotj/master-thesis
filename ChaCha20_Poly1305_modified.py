@@ -1,7 +1,7 @@
 import math
 import struct
 
-############################ CHACHA20
+#CHACHA20:
 
 def rotate_left(val, numb):
     return ((val << numb) & 0xffffffff) | val >> (32 - numb)
@@ -75,7 +75,7 @@ def chacha20_encrypt(key, counter, nonce, plaintext):
     return encrypted_message
 
 
-############################ POLY1305
+#POLY1305:
 
 #Convert a number from little endian byte format:
 def convert_little_endian_bytes_to_number(little_endian_byte): 
@@ -107,7 +107,7 @@ def poly1305_mac(msg, key):
     accumulator += K_s
     return convert_to_16_bytes_little_endian(accumulator)
 
-############################ CHACHA20-POLY1305:
+#CHACHA20-POLY1305 WITH SPLIT KEYS:
 
 def poly1305_key_generation(key, nonce):
     ctr = 0
