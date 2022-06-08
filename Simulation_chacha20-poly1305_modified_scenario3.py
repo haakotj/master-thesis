@@ -68,9 +68,7 @@ def modifying_authentication_tag(name, env2, in_pipe2, out_pipe3):
     new_tag = get_random_bytes(8)
     content = [byte_msg['nonce'].hex(), byte_msg['header'].hex(), byte_msg['ciphertext'].hex(), new_tag.hex()]
     new_msg = json.dumps(dict(zip(type, content)))
-    
     print('%s the following message at time %d: %s is changed to the following message: %s'  % (name, env2.now, msg_receieved, new_msg)+"\n")
-    #print('%s tampers and sends the following message at time %d: %s' % (name, env2.now, new_msg)+"\n")
     out_pipe3.put(new_msg)
 
 
