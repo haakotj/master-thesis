@@ -26,7 +26,7 @@ def sensor(name, env, out_pipe):
     #Authenticated encryption:
     ciphertext, tag = chaCha20_poly1305_authenticated_encryption(integrity_key, encryption_key, nonce, plaintext, ad)
     
-    #Illustrate the message as a dictionary where the data is shown as hexadecimal
+    #Illustrate the message as a dictionary where the data is displayed as hexadecimal
     content = [nonce.hex(), ad.hex(), ciphertext.hex(), tag.hex()]
     result = json.dumps(dict(zip(type, content)))
     print('%s sends the following message at time %d: %s' % (name, env.now, result)+"\n")
